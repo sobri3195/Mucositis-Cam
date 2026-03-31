@@ -1,0 +1,156 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #17233d;
+  --muted: #5d6b89;
+  --accent: #2f6fed;
+  --accent-soft: #e7efff;
+  --danger: #c73b3b;
+  --border: #e4e9f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1rem 0.5rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0.2rem 0 0;
+  font-size: 1.4rem;
+}
+
+.cta {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.65rem 0.9rem;
+  font-weight: 600;
+}
+
+.content {
+  padding: 0.8rem 1rem 5.5rem;
+}
+
+.card {
+  display: none;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 30px rgba(12, 35, 84, 0.06);
+}
+
+.card.active {
+  display: block;
+}
+
+.card p,
+.card li {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.metric-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metric-grid article {
+  background: var(--accent-soft);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.metric-label {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.metric-value {
+  margin: 0.2rem 0 0;
+  color: var(--text);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.metric-value.danger {
+  color: var(--danger);
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--border);
+  background: #fff;
+  padding: 0.4rem 0.35rem calc(0.5rem + env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25rem;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 0.45rem 0.25rem;
+  display: grid;
+  gap: 0.2rem;
+  place-items: center;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.nav-item span {
+  font-size: 0.72rem;
+}
+
+.nav-item.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .topbar,
+  .content {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .content {
+    padding-bottom: 1rem;
+  }
+
+  .bottom-nav {
+    max-width: 880px;
+    margin: 0 auto 1rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    left: 1rem;
+    right: 1rem;
+  }
+}

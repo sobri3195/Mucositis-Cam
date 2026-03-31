@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mucositis-Cam</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Studi Prediktif</p>
+        <h1>Mucositis-Cam</h1>
+      </div>
+      <button class="cta">Lihat Risiko Hari Ini</button>
+    </header>
+
+    <main class="content" id="main-content">
+      <section class="card active" id="beranda">
+        <h2>Beranda</h2>
+        <p>Prediksi risiko mukositis berat berdasarkan foto intraoral harian dan dose map RT kepala-leher.</p>
+        <ul>
+          <li>Monitoring harian pasien</li>
+          <li>Skor risiko real-time</li>
+          <li>Peringatan dini komplikasi</li>
+        </ul>
+      </section>
+
+      <section class="card" id="pasien">
+        <h2>Pasien</h2>
+        <p>Daftar pasien aktif beserta tren gejala dan kebutuhan tindak lanjut.</p>
+        <div class="metric-grid">
+          <article>
+            <p class="metric-label">Aktif</p>
+            <p class="metric-value">24</p>
+          </article>
+          <article>
+            <p class="metric-label">Risiko tinggi</p>
+            <p class="metric-value danger">6</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card" id="analitik">
+        <h2>Analitik</h2>
+        <p>Evaluasi performa model dan outcome klinis sekunder (feeding tube, interupsi RT, QoL).</p>
+      </section>
+
+      <section class="card" id="profil">
+        <h2>Profil</h2>
+        <p>Pengaturan akun peneliti, notifikasi, dan protokol dokumentasi data.</p>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navigasi utama">
+      <button class="nav-item active" data-target="beranda">🏠 <span>Beranda</span></button>
+      <button class="nav-item" data-target="pasien">👥 <span>Pasien</span></button>
+      <button class="nav-item" data-target="analitik">📊 <span>Analitik</span></button>
+      <button class="nav-item" data-target="profil">👤 <span>Profil</span></button>
+    </nav>
+
+    <script src="script.js"></script>
+  </body>
+</html>
